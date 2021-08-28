@@ -1,7 +1,5 @@
 # Moneymanagementapp
 
-## This is the Front-End portion of the Money Managment Application
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
 ## Development server
