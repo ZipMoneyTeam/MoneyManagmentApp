@@ -23,7 +23,6 @@ const routes:Routes=[
   {path:'withdraw',component:WithdrawComponent},
   {path:'transfer-account',component:TransferAccountComponent},
  
-  
 ]
 
 @NgModule({
@@ -39,6 +38,7 @@ const routes:Routes=[
     FundsTransferComponent,
     
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
