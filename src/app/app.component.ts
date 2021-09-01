@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Gringotts Wizarding Bank';
   
+  title='';
   constructor() { }
 
   ngOnInit(): void {

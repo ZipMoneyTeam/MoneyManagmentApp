@@ -15,7 +15,7 @@ import { FundsTransferComponent } from './funds-transfer/funds-transfer.componen
 import { LoginSaveComponent } from './login-save/login-save.component'
 
 const routes:Routes=[
-  { path: 'homepage',component:HomepageComponent},
+  {path: '',component:HomepageComponent},
   {path:'userLogins',component:UserLoginsComponent},
   {path:'create-account',component:CreateAccountComponent},
   {path:'funds-transfer',component:FundsTransferComponent},
