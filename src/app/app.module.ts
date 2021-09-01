@@ -12,7 +12,7 @@ import { TransferAccountComponent } from './transfer-account/transfer-account.co
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FundsTransferComponent } from './funds-transfer/funds-transfer.component';
-import { LoginSaveComponent } from './login-save/login-save.component'
+
 
 const routes:Routes=[
   {path: '',component:HomepageComponent},
@@ -22,7 +22,7 @@ const routes:Routes=[
   {path:'deposit',component:DepositComponent},
   {path:'withdraw',component:WithdrawComponent},
   {path:'transfer-account',component:TransferAccountComponent},
-  {path:'login-save',component:LoginSaveComponent}
+ 
   
 ]
 
@@ -37,7 +37,7 @@ const routes:Routes=[
     WithdrawComponent,
     HomepageComponent,
     FundsTransferComponent,
-    LoginSaveComponent
+    
   ],
   imports: [
     BrowserModule,
