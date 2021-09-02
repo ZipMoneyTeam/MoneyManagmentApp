@@ -10,10 +10,10 @@ const express = require('express');
 const app = express();
 
 app.use(requireHTTPS);
-app.use(express.static('./dist/MoneyManagementApp'));
+app.use(express.static('./dist/moneymanagementapp'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/MoneyManagementApp/'}),
+    res.sendFile('index.html', {root: 'dist/moneymanagementapp/'}),
 );
 
 app.listen(process.env.PORT || 8080);
