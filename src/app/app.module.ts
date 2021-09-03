@@ -12,6 +12,8 @@ import { TransferAccountComponent } from './transfer-account/transfer-account.co
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FundsTransferComponent } from './funds-transfer/funds-transfer.component';
+import { ViewAccountComponent } from './view-account/view-account.component';
+import { AppUserService } from './appUser.service';
 
 
 const routes:Routes=[
@@ -22,6 +24,7 @@ const routes:Routes=[
   {path:'deposit',component:DepositComponent},
   {path:'withdraw',component:WithdrawComponent},
   {path:'transfer-account',component:TransferAccountComponent},
+  {path:'view-account',component:ViewAccountComponent}
  
 ]
 
@@ -36,6 +39,7 @@ const routes:Routes=[
     WithdrawComponent,
     HomepageComponent,
     FundsTransferComponent,
+    ViewAccountComponent,
     
   ],
 
@@ -45,7 +49,7 @@ const routes:Routes=[
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AppUsersComponent,UserLoginsComponent],        
+  providers: [AppUsersComponent,UserLoginsComponent,AppUserService],        
   bootstrap: [AppComponent]
 })
 export class AppModule { }
