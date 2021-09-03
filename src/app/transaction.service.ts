@@ -18,17 +18,17 @@ constructor(private http: HttpClient) { }
     return this.http.get<Transaction[]>(`${this.apiServerUrl}/transaction-controller/readAll`);
   }
 
-  public createTransactions(transaction: Transaction): Observable<Transaction> {
-    return this.http.post<Transaction>(`${this.apiServerUrl}/transaction-controller/create`, transaction);
-  }
+//   public createTransactions(transaction: Transaction): Observable<Transaction> {
+//     return this.http.post<Transaction>(`${this.apiServerUrl}/transaction-controller/create`, transaction);
+//   }
 
-  public updateTransactions(transaction: Transaction): Observable<Transaction> {
-    return this.http.put<Transaction>(`${this.apiServerUrl}/transaction-controller/update`, transaction);
-  }
+//   public updateTransactions(transaction: Transaction): Observable<Transaction> {
+//     return this.http.put<Transaction>(`${this.apiServerUrl}/transaction-controller/update`, transaction);
+//   }
 
-  public deleteTransactions(transactionId: number): Observable<Transaction> {
-    return this.http.delete<Transaction>(`${this.apiServerUrl}/transaction-controller/delete/${transactionId}`);
-  }
+//   public deleteTransactions(transactionId: number): Observable<Transaction> {
+//     return this.http.delete<Transaction>(`${this.apiServerUrl}/transaction-controller/delete/${transactionId}`);
+//   }
 
 
 
