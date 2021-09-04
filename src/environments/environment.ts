@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://gwbspringbootapp.herokuapp.com'
+  apiBaseUrl: 'http://localhost:8080'
+  //apiBaseUrl: 'https://gwbspringbootapp.herokuapp.com'
 };
 
 /*
