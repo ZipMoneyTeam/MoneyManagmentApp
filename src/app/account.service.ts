@@ -18,7 +18,7 @@ constructor(private http: HttpClient) { }
     return this.http.get<Account[]>(`${this.apiServerUrl}/account-controller/readAll`);
   }
 
-  public createAccounts(account: Account): Observable<Account> {
+  public createAccount(account: Account): Observable<Account> {
     return this.http.post<Account>(`${this.apiServerUrl}/account-controller/create`, account);
   }
 

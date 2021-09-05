@@ -14,7 +14,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FundsTransferComponent } from './funds-transfer/funds-transfer.component';
 import { ViewAccountComponent } from './view-account/view-account.component';
 import { AppUserService } from './appUser.service';
-
+import { UserLoginService } from './userLogin.service';
+import { AccountService } from './account.service';
+import { TransactionService } from './transaction.service';
 
 const routes:Routes=[
   {path: '',component:HomepageComponent},
@@ -40,8 +42,7 @@ const routes:Routes=[
     HomepageComponent,
     FundsTransferComponent,
     ViewAccountComponent,
-    
-  ],
+    ],
 
   imports: [
     BrowserModule,
@@ -49,7 +50,7 @@ const routes:Routes=[
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AppUsersComponent,UserLoginsComponent,AppUserService],        
+  providers: [AppUsersComponent,UserLoginsComponent,AppUserService,UserLoginService,AccountService,TransactionService],        
   bootstrap: [AppComponent]
 })
 export class AppModule { }
