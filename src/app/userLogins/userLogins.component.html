@@ -1,10 +1,13 @@
 
 <!-- <app-appUsers></app-appUsers> -->
+
 <body>
-<form #loginForm="ngForm" (ngSubmit)="submit(loginForm)"> 
+   
+    
+<form #loginForm="ngForm" (ngSubmit)="submit(loginForm)" action="/action_page.php"> 
 <label for="emailId">Muggle E-Mail Id</label>
 <br>
-<input type="text" name="emailId" [(ngModel)]="emailId" required>
+<input type="text" name="emailId" [(ngModel)]="emailId" required >
 <br>
 <br>
 <label for="password">Password</label>
@@ -14,10 +17,13 @@
 <br>
     <button type = "submit" > Submit </button>
 </form>
+<br>
 
 <div *ngIf = "errorMessage != null"> 
-    <label for="errorMess">&nbsp;Hey muggle,Wish you had magic to remember your login details?Too late!</label>
+    <label for="errorMess">&nbsp;Hey muggle!
+        Wish you had magic to remember your login details? Sorry,too late! Enter you correct credentials!</label>
 </div>
+
 
 
 </body>

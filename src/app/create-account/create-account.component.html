@@ -3,8 +3,15 @@
 <body>
     <img class ="images" src="../assets/Advertisementjr.png" alt="safety advertisement" >
     <br>
-<div>    
+   
+
+  
 <form #createAccountForm="ngForm" (ngSubmit)="submit(createAccountForm)"> 
+    <div *ngIf = "errorMessage != null"> 
+        <label for="errorMess">&nbsp;Whats the hurry!?! Enter All the details if you'd like a vault!!</label>
+    </div>
+    <br>
+    <br>
     <label for="firstName">Muggle First Name</label>
     <br>
     <input type="text" name="firstName" [(ngModel)]="firstName">
@@ -41,13 +48,12 @@
     <br>
     <br>
     <button type = "submit" > Submit </button>
+   
           
 </form>
-</div>
 
-<div *ngIf = "errorMessage != null"> 
-    <label for="errorMess">&nbsp;Enter all the details!!!</label>
-</div>
+
+
 
 
 
