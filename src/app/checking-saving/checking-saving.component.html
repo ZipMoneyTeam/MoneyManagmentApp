@@ -24,5 +24,8 @@
     <br>
     <br>
     <button type = "submit" > Submit </button>
+    <div *ngIf = "errorMessage != null"> 
+        <label for="errorMess">&nbsp;Your details are not present in the vault!!</label>
+    </div>
 </form>
 </body>
