@@ -28,7 +28,8 @@ const routes:Routes=[
   {path:'withdraw',component:WithdrawComponent},
   {path:'transfer-account',component:TransferAccountComponent},
   {path:'view-account',component:ViewAccountComponent},
-  {path:'checking-saving', component:CheckingSavingComponent}
+  {path:'checking-saving', component:CheckingSavingComponent},
+  {path:'homepage',component:HomepageComponent}
 ]
 
 @NgModule({
