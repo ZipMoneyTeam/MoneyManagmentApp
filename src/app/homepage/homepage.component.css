@@ -37,16 +37,17 @@ body {
 } */
 .create{
     margin-left: 85%;
+    font-size: large;
     
 }
 .login{
     margin-left: 85%;
+    font-size: large;
 }
 .login1{
-    /* margin-right: auto;
-    display: block;
-    margin-left: auto; */
+   font-size: large;
     text-align: center;
+   
 }
 .footer {
     position: fixed;
