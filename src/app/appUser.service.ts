@@ -18,7 +18,7 @@ constructor(private http: HttpClient) { }
     return this.http.get<AppUser[]>(`${this.apiServerUrl}/user-controller/readAll`);
   }
 
-  public createAppUsers(appUser: AppUser): Observable<AppUser> {
+  public createAppUser(appUser: AppUser): Observable<AppUser> {
     return this.http.post<AppUser>(`${this.apiServerUrl}/user-controller/create`, appUser);
   }
 
