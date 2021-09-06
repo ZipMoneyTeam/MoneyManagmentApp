@@ -1,13 +1,20 @@
 
-<!-- <app-appUsers></app-appUsers> --><body>
-<form> 
-
-    <label for="userName">Muggle Id</label><br>
-<input type="text" name="userName"><br><br>
-<label for="password">Password</label><br>
+<!-- <app-appUsers></app-appUsers> -->
+<body>
+<form #loginForm="ngForm" (ngSubmit)="submit(loginForm)"> 
+<label for="userName">Muggle Id</label>
+<br>
+<input type="text" name="userName"><br>
+<br>
+<label for="password">Password</label>
+<br>
 <input type="password" name="password">
+<br>
+<br>
 <nav>
-    <a routerLink="/funds-transfer"><button>Save</button></a>
+    <a routerLink="/funds-transfer">
+        <button type = "submit" > Submit </button>
+    </a>
 </nav>
 </form>
 
