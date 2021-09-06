@@ -2,20 +2,17 @@
 <!-- <app-appUsers></app-appUsers> -->
 <body>
 <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)"> 
-<label for="userName">Muggle Id</label>
+<label for="emailId">Muggle E-Mail Id</label>
 <br>
-<input type="text" name="userName"><br>
+<input type="text" name="emailId" [(ngModel)]="emailId">
+<br>
 <br>
 <label for="password">Password</label>
 <br>
-<input type="password" name="password">
+<input type="password" name="password" [(ngModel)]="password">
 <br>
 <br>
-<nav>
-    <a routerLink="/funds-transfer">
-        <button type = "submit" > Submit </button>
-    </a>
-</nav>
+    <button type = "submit" > Submit </button>
 </form>
 
 

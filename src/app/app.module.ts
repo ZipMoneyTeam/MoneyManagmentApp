@@ -17,6 +17,7 @@ import { AppUserService } from './appUser.service';
 import { UserLoginService } from './userLogin.service';
 import { AccountService } from './account.service';
 import { TransactionService } from './transaction.service';
+import { CheckingSavingComponent } from './checking-saving/checking-saving.component';
 
 const routes:Routes=[
   {path: '',component:HomepageComponent},
@@ -26,8 +27,8 @@ const routes:Routes=[
   {path:'deposit',component:DepositComponent},
   {path:'withdraw',component:WithdrawComponent},
   {path:'transfer-account',component:TransferAccountComponent},
-  {path:'view-account',component:ViewAccountComponent}
- 
+  {path:'view-account',component:ViewAccountComponent},
+  {path:'checking-saving', component:CheckingSavingComponent}
 ]
 
 @NgModule({
@@ -42,6 +43,7 @@ const routes:Routes=[
     HomepageComponent,
     FundsTransferComponent,
     ViewAccountComponent,
+    CheckingSavingComponent,
     ],
 
   imports: [

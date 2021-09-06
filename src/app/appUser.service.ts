@@ -10,12 +10,17 @@ import { environment } from 'src/environments/environment';
 
 export class AppUserService {
   private apiServerUrl = environment.apiBaseUrl;
+  private currentUser : AppUser = null;
 
 
 constructor(private http: HttpClient) { }
 
   public getAppUsers(): Observable<AppUser[]> {
     return this.http.get<AppUser[]>(`${this.apiServerUrl}/user-controller/readAll`);
+  }
+
+  public getAppUsersByEmailId(emailId: string): Observable<AppUser[]> {
+    return this.http.get<AppUser[]>(`${this.apiServerUrl}/user-controller/read/${emailId}`);
   }
 
   public createAppUser(appUser: AppUser): Observable<AppUser> {
@@ -30,7 +35,13 @@ constructor(private http: HttpClient) { }
     return this.http.delete<AppUser>(`${this.apiServerUrl}/user-controller/delete/${appUserId}`);
   }
 
+  public getCurrentUser() : AppUser {
+    return this.currentUser;
+  }
 
+  public setCurrentUser(appUser : AppUser){
+    this.currentUser = appUser;
+  }
 
 
 }

@@ -1,0 +1,26 @@
+<form #createCheckingOrSavingForm="ngForm" (ngSubmit)="submit(createCheckingOrSavingForm)"> 
+    <label for="accountName">Muggle Name</label>
+    <br>
+    <input type="text" name="accountName" [(ngModel)]="accountName">
+    <br>
+    <br>
+    <label for="accountType">AccountType</label>
+    <br>
+    <select name="accountType" id="accountType" [(ngModel)]="accountType">
+        <option value="checking">Checking Account</option>
+        <option value="saving">Saving Account</option>
+    </select>
+    <br>
+    <br>
+    <label for="amount"> Amount </label>
+    <br>
+    <input type="number" name="amount" [(ngModel)]="amount">
+    <!-- <br>
+    <br>
+    <label for="emailId"> E-Mail Id</label>
+    <br>
+    <input type="text" name="emailId" [(ngModel)]="emailId"> -->
+    <br>
+    <br>
+    <button type = "submit" > Submit </button>
+</form>

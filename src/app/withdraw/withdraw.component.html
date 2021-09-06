@@ -1,32 +1,34 @@
 <body>
-   <form>   
-      <label for="accountName">Muggle Name</label>
-      <br>
-      <input type="text" name="accountName">
-      <br>
-      <br>
-      
-      <label for="accountNumber">AccountNumber</label>
-      <br>
-      <input type="number" name="accountNumber">
-      <br>
-      <br>
-      <label for="accountType">AccountType</label>
-      <br>
-      <select name="accountType" id="accountType">
-         <option value="checking">Checking Account</option>
-         <option value="saving">Saving Account</option>
-      </select>
-      <br>
-      <br>
-      <label for="amountToWithdraw">Amount To Withdraw</label>
-      <br>
-      <input type="number" name="amountToWithdraw">
-      <br>
-      <br>
+   <form #withdrawForm="ngForm" (ngSubmit)="submit(withdrawForm)" >   
+       <label for="accountName">Muggle Name</label>
+       <br>
+       <input type="text" name="accountName">
+       <br>
+       <br>
+       <label for="accountId">AccountId</label>
+       <br>
+       <select name="accountId" id="accountId" [(ngModel)]="accountId">
+           <ng-container *ngFor="let a of accounts"> 
+               <option  value="{{a.accountId}}">{{a.accountId}}</option>
+           </ng-container>
+   
+       </select>
+       <br>
+       <br>
+       <label for="accountType">AccountType</label>
+       <br>
+       <select name="accountType" id="accountType">
+           <option value="checking">Checking Account</option>
+           <option value="saving">Saving Account</option>
+       </select>
+       <br>
+       <br>
+       <label for="amountToWithdraw">Amount To Withdraw</label>
+       <br>
+       <input type="number" name="amountToWithdraw" [(ngModel)]="amountToWithdraw">
+       <br>
+       <br>
+       <button type = "submit" > Submit </button>
    </form>
-   <nav>
-      <a routerLink="/view-account">
-         <button>Submit</button></a>
-   </nav>
-</body>
+   
+   </body>
