@@ -1,4 +1,5 @@
-<form #createCheckingOrSavingForm="ngForm" (ngSubmit)="submit(createCheckingOrSavingForm)"> 
+<body>
+    <form #createCheckingOrSavingForm="ngForm" (ngSubmit)="submit(createCheckingOrSavingForm)"> 
     <label for="accountName">Muggle Name</label>
     <br>
     <input type="text" name="accountName" [(ngModel)]="accountName">
@@ -24,3 +25,4 @@
     <br>
     <button type = "submit" > Submit </button>
 </form>
+</body>

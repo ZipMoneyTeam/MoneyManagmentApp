@@ -36,7 +36,7 @@ export class CreateAccountComponent implements OnInit {
     } as RegistrationDto).toPromise()
     .then(result => {
       console.log("Success:", result);
-      this.router.navigate(["/userLogin"]);
+      this.router.navigate(["/userLogins"]);
     })
     .catch(e => {
       // handle when something goes wrong or bad credentials
