@@ -48,6 +48,13 @@ body {
     margin-left: auto; */
     text-align: center;
 }
+.footer {
+    position: fixed;
+    float: left;
+   bottom: 0px;
+   /* padding-bottom: 5px; */
+  }
+
 .button{
     color:black;
     font-size: smaller;
