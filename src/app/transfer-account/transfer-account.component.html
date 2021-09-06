@@ -1,19 +1,21 @@
 <body>
-<form>   
+<form #transferForm="ngForm" (ngSubmit)="submit(transferForm)">   
 
-    <label for="accountName">Vault Holder Name</label>
+    <!-- <label for="accountName">Muggle Name</label>
     <br>
     <input type="text" name="accountName">
     <br>
+    <br> -->
+    <label for="accountId">Account Id to Transfer From</label>
     <br>
-
-    <label for="accountNumber">Vault Number</label>
+    <select name="accountIdFrom" id="accountIdFrom" [(ngModel)]="accountIdFrom">
+        <ng-container *ngFor="let a of accounts"> 
+            <option  value="{{a.accountId}}">{{a.accountId}}</option>
+        </ng-container>
+    </select>
     <br>
-    <input type="number" name="accountNumber">
     <br>
-    <br>
-
-    <label for="accountType">AccountType</label>
+    <label for="accountType">Account Type</label>
     <br>
     <select name="accountType" id="accountType">
         <option value="checking">Checking Account</option>
@@ -21,22 +23,26 @@
     </select>
     <br>
     <br>
-
-    <label for="accountNameToTransfer">Vault Holder Name to Transfer to</label>
+    <label for="accountId">Account Id to Transfer To</label>
     <br>
-    <input type="text" name="accountNameToTransfer">
-    <br>
-    <br>
-
-    <label for="accountNumberToTransfer">Vault Number to Transfer to</label>
-    <br>
-    <input type="number" name="accountNumberToTransfer">
+    <select name="accountIdTo" id="accountIdTo" [(ngModel)]="accountIdTo">
+        <ng-container *ngFor="let a of accounts"> 
+            <option  value="{{a.accountId}}">{{a.accountId}}</option>
+        </ng-container>
+    </select>
     <br>
     <br>
-
+    <label for="accountType">Account Type</label>
+    <br>
+    <select name="accountType" id="accountType">
+        <option value="checking">Checking Account</option>
+        <option value="saving">Saving Account</option>
+    </select>
+    <br>
+    <br>
     <label for="amountToTransfer">Amount To Transfer</label>
     <br>
-    <input type="number" name="amountToTranfer">
+    <input type="number" name="amountToTransfer" [(ngModel)]="amountToTransfer">
     <br>
     <br>
     <button type = "submit" > Submit </button>

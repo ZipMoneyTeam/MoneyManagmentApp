@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Account } from '../account';
+import { AccountService } from '../account.service';
+import { AppUserService } from '../appUser.service';
 
 @Component({
   selector: 'app-view-account',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAccountComponent implements OnInit {
 
-  constructor() { }
+  public accounts:Account[];
+  
+  constructor(private accountService:AccountService, private appUserService: AppUserService, router : Router) { }
 
   ngOnInit(): void {
+    this.accountService.getAccountsByEmailId(this.appUserService.getCurrentUser().emailId)
+    .toPromise()
+    .then(result => console.log(this.accounts = result))
   }
+
+  public getAccounts(): void {
+    this.accountService.getAccounts().subscribe(
+      (response:Account[])=>{
+        this.accounts=response;
+        console.log(this.accounts);
+      }
+    )
+   }
 
 }

@@ -43,7 +43,7 @@ constructor(private http: HttpClient) { }
   }
 
   public transfer(accountIdFrom: number, accountIdTo: number, amountToTransfer: number): Observable<Account> {
-    return this.http.post<Account>(`${this.apiServerUrl}/account-controller/transfer/${accountIdFrom}, ${accountIdTo}`, amountToTransfer);
+    return this.http.post<Account>(`${this.apiServerUrl}/account-controller/transfer/${accountIdFrom}/${accountIdTo}`, amountToTransfer);
   }
 
 
