@@ -23,7 +23,7 @@ constructor(private http: HttpClient, private router: Router) { }
   public getAppUsersByEmailId(emailId: string): Observable<AppUser[]> {
     return this.http.get<AppUser[]>(`${this.apiServerUrl}/user-controller/read/${emailId}`);
   }
-
+  
   public createAppUser(appUser: AppUser): Observable<AppUser> {
     return this.http.post<AppUser>(`${this.apiServerUrl}/user-controller/create`, appUser);
   }
