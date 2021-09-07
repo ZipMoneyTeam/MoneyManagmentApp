@@ -30,3 +30,9 @@ body {
     font-size: larger;
     font-family: cursive;
 }
+
+div{
+    font-family:monospace;
+    font-size: larger;
+    color:orangered;
+   }

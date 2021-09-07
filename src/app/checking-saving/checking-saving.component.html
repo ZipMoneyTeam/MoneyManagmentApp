@@ -10,6 +10,11 @@
     <br>
     <br>
     <form #createCheckingOrSavingForm="ngForm" (ngSubmit)="submit(createCheckingOrSavingForm)"> 
+        <div *ngIf = "errorMessage != null"> 
+            <label for="errorMess">&nbsp;What's the hurry!?! Enter All the details if you'd like a new Account!!</label>
+        </div>
+        <br>
+        <br>
     <label for="accountName">Account Name</label>
     <br>
     <input type="text" name="accountName" [(ngModel)]="accountName">
