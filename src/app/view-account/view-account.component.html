@@ -1,15 +1,30 @@
 <body>
-    <p class = "accountView" > Accounts View </p>
+    <p class = "accountView" > Accounts View  </p>
     <div *ngIf="accounts">
         <div *ngFor="let key of accounts">
-          <div>{{key.accountId}} | {{key.accountName}} | {{key.accountType}} | {{key.amount}}</div>
-        </div>
+            <label class="account" for="accountId">Vault Number: &nbsp;&nbsp;{{key.accountId}}</label>
+            <br>
+            <br>
+          <!-- <div class="value">{{key.accountId}} </div><br> -->
+          <label class="account" for="accountName">VaultHolder Name: &nbsp;&nbsp;{{key.accountName}}</label>
+          <br>
+          <br>
+          <!-- <div class="value">{{key.accountName}} </div><br> -->
+          <label class="account" for="accountType">Vault Type:&nbsp;&nbsp;{{key.accountType}}</label>
+          <br>
+          <br>
+          <!-- <div class="value">{{key.accountType}} </div><br> -->
+          <label class="account"for="amount">Amount:&nbsp;&nbsp;{{key.amount}}</label>
+          <!-- <div class="value">{{key.amount}} </div><br> -->
+          <br>
+        
+       </div>
       </div>
-      
+   
       <div *ngIf="!accounts">
           <div>0 results found!</div>
       </div>
-
+    
 
     <!-- <form>
         <label for="accountName">Muggle Name</label>

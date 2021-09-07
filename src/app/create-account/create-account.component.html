@@ -7,9 +7,11 @@
 
   
 <form #createAccountForm="ngForm" (ngSubmit)="submit(createAccountForm)"> 
+
     <div *ngIf = "errorMessage != null"> 
         <label for="errorMess">&nbsp;Whats the hurry!?! Enter All the details if you'd like a vault!!</label>
     </div>
+
     <br>
     <br>
     <label for="firstName">Muggle First Name</label>
