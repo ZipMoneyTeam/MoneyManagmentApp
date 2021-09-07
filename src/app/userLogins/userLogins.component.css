@@ -18,7 +18,8 @@ form{
 }
 
 div{
-    font-size: large;
-    font-family:cursive;
+    font-family:monospace;
+    font-size: larger;
+    color:orangered;
     text-align: center;
-}
+   }

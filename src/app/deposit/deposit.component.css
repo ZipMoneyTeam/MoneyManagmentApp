@@ -19,6 +19,8 @@ body {
     position:absolute;
     top: 10%;
     left:10%; 
+    font-size: larger;
+    font-family: cursive;
 }
 
 
@@ -26,4 +28,6 @@ body {
     position:absolute;
     top: 10%;
     right:10%;
+    font-size: larger;
+    font-family: cursive;
 }
