@@ -1,4 +1,9 @@
 <body>
+    <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
+        <button class = "logout">Logout</button>
+    </a>
+    <br>
+    <br>
     <p class = "accountView" > Accounts View  </p>
     <div *ngIf="accounts">
         <div *ngFor="let key of accounts">
@@ -17,6 +22,8 @@
           <label class="account"for="amount">Amount:&nbsp;&nbsp;{{key.amount}}</label>
           <!-- <div class="value">{{key.amount}} </div><br> -->
           <br>
+          <br>
+          <br>
         
        </div>
       </div>
@@ -25,6 +32,7 @@
           <div>0 results found!</div>
       </div>
     
+      
 
     <!-- <form>
         <label for="accountName">Muggle Name</label>

@@ -13,7 +13,7 @@ export class ViewAccountComponent implements OnInit {
 
   public accounts:Account[];
   
-  constructor(private accountService:AccountService, private appUserService: AppUserService, router : Router) { }
+  constructor(private accountService:AccountService, public appUserService: AppUserService, router : Router) { }
 
   ngOnInit(): void {
     this.accountService.getAccountsByEmailId(this.appUserService.getCurrentUser().emailId)

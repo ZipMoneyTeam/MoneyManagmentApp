@@ -36,3 +36,10 @@ body {
        color:white;
        
    }
+
+   .logout{
+    position:absolute;
+    top: 10%;
+    right:10%;
+    
+}

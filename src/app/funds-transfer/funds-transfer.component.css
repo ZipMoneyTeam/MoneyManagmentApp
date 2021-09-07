@@ -14,12 +14,19 @@ body {
     
    }
 
-.logout{
+/* .logout{
     
     text-align: center;
     justify-content: center;
     font-size: larger;
     font-family:cursive;
+    } */
+
+    .logout{
+        position:absolute;
+        top: 10%;
+        right:10%;
+        
     }
 
 .methods{
