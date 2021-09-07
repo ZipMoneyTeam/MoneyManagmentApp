@@ -35,7 +35,6 @@ export class AppComponent {
     //this.getAccounts();
     // this.getTransactions();
     //this.getUserLogins();
-  }
 
   public createAccount(account:Account):void{
     this.accountService.createAccount(account).subscribe(
