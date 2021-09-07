@@ -21,7 +21,7 @@ export class TransferAccountComponent implements OnInit {
   accountType : string;
   amountToTransfer : number;
 
-  constructor(private accountService: AccountService, private appUserService: AppUserService, private router: Router) { }
+  constructor(private accountService: AccountService, public appUserService: AppUserService, private router: Router) { }
 
   submit(transferForm: NgForm): void {
     console.log("Submit", transferForm.value);

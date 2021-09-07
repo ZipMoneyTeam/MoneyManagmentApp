@@ -20,7 +20,7 @@ export class WithdrawComponent implements OnInit {
   accountType : string;
   amountToWithdraw : number;
 
-  constructor(private accountService: AccountService, private appUserService: AppUserService, private router: Router) { }
+  constructor(private accountService: AccountService, public appUserService: AppUserService, private router: Router) { }
 
   submit(withdrawForm: NgForm): void {
     console.log("Submit", withdrawForm.value);

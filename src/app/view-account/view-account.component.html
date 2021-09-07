@@ -2,29 +2,33 @@
     <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
         <button class = "logout">Logout</button>
     </a>
+    <a routerLink="/funds-transfer">
+        <button class = "goBack">Back</button>
+    </a>
     <br>
     <br>
     <p class = "accountView" > Accounts View  </p>
     <div *ngIf="accounts">
         <div *ngFor="let key of accounts">
-            <label class="account" for="accountId">Vault Number: &nbsp;&nbsp;{{key.accountId}}</label>
+            <label class="account" for="accountId">Account ID: &nbsp;&nbsp;{{key.accountId}}</label>
             <br>
             <br>
           <!-- <div class="value">{{key.accountId}} </div><br> -->
-          <label class="account" for="accountName">VaultHolder Name: &nbsp;&nbsp;{{key.accountName}}</label>
+          <label class="account" for="accountName">Account Name: &nbsp;&nbsp;{{key.accountName}}</label>
           <br>
           <br>
           <!-- <div class="value">{{key.accountName}} </div><br> -->
-          <label class="account" for="accountType">Vault Type:&nbsp;&nbsp;{{key.accountType}}</label>
+          <label class="account" for="accountType">Account Type:&nbsp;&nbsp;{{key.accountType}}</label>
           <br>
           <br>
           <!-- <div class="value">{{key.accountType}} </div><br> -->
           <label class="account"for="amount">Amount:&nbsp;&nbsp;{{key.amount}}</label>
           <!-- <div class="value">{{key.amount}} </div><br> -->
-          <br>
-          <br>
-          <br>
-        
+            <br>
+            <br>
+            <a>----------------------------------------------------------------------------------------</a>
+            <br>
+            <br>
        </div>
       </div>
    

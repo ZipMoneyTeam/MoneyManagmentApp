@@ -1,11 +1,21 @@
 <body>
+    <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
+        <button class ="logout">Logout</button>
+    </a>
+    <br>
+    <br>
+    <a routerLink="/funds-transfer">
+        <button class = "goBack">Back</button>
+    </a>
+    <br>
+    <br>
     <form #createCheckingOrSavingForm="ngForm" (ngSubmit)="submit(createCheckingOrSavingForm)"> 
-    <label for="accountName">Muggle Name</label>
+    <label for="accountName">Account Name</label>
     <br>
     <input type="text" name="accountName" [(ngModel)]="accountName">
     <br>
     <br>
-    <label for="accountType">AccountType</label>
+    <label for="accountType">Account Type</label>
     <br>
     <select name="accountType" id="accountType" [(ngModel)]="accountType">
         <option value="checking">Checking Account</option>

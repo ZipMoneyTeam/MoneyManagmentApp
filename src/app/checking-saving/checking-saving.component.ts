@@ -19,7 +19,7 @@ export class CheckingSavingComponent implements OnInit {
   //emailId : any;
 
 
-  constructor(private accountService: AccountService, private router: Router, private appUserService: AppUserService) { }
+  constructor(private accountService: AccountService, private router: Router, public appUserService: AppUserService) { }
 
   submit(createCheckingOrSavingForm: NgForm): void {
     console.log("Submit", createCheckingOrSavingForm.value);

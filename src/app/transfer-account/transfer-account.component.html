@@ -1,4 +1,14 @@
 <body>
+    <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
+        <button class ="logout">Logout</button>
+    </a>
+    <br>
+    <br>
+    <a routerLink="/funds-transfer">
+        <button class = "goBack">Back</button>
+    </a>
+    <br>
+    <br>
 <form #transferForm="ngForm" (ngSubmit)="submit(transferForm)">   
 
     <!-- <label for="accountName">Muggle Name</label>
@@ -6,7 +16,7 @@
     <input type="text" name="accountName">
     <br>
     <br> -->
-    <label for="accountId">Account Id to Transfer From</label>
+    <label for="accountId">Account ID to Transfer From</label>
     <br>
     <select name="accountIdFrom" id="accountIdFrom" [(ngModel)]="accountIdFrom">
         <ng-container *ngFor="let a of accounts"> 
@@ -23,7 +33,10 @@
     </select>
     <br>
     <br>
-    <label for="accountId">Account Id to Transfer To</label>
+    <a>--------------------------------------------------------</a>
+    <br>
+    <br>
+    <label for="accountId">Account ID to Transfer To</label>
     <br>
     <select name="accountIdTo" id="accountIdTo" [(ngModel)]="accountIdTo">
         <ng-container *ngFor="let a of accounts"> 
@@ -38,6 +51,9 @@
         <option value="checking">Checking Account</option>
         <option value="saving">Saving Account</option>
     </select>
+    <br>
+    <br>
+    <a>--------------------------------------------------------</a>
     <br>
     <br>
     <label for="amountToTransfer">Amount To Transfer</label>

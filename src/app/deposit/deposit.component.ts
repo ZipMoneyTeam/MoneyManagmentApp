@@ -20,7 +20,7 @@ export class DepositComponent implements OnInit {
   accountType : string;
   amountToDeposit : number;
 
-  constructor(private accountService: AccountService, private appUserService: AppUserService, private router: Router) { }
+  constructor(private accountService: AccountService, public appUserService: AppUserService, private router: Router) { }
 
   submit(depositForm: NgForm): void {
     console.log("Submit", depositForm.value);
