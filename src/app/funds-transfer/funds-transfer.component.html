@@ -22,10 +22,15 @@
         <br>
         <br>    
     <br>
-        <a routerLink="/homepage">
+        <!-- <a routerLink="/homepage"> -->
             <!-- <button class="logout">Logout</button></a> -->
-            <button onClick="window.location.reload();">Logout</button>
+            <!-- <button onClick="window.location.reload();">Logout</button> -->
 
+        <!-- </a> -->
+
+        <!-- <button onclick = "myFunc()" > Logout </button> -->
+        <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
+            <button>Logout</button>
         </a>
 
     </nav>

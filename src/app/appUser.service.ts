@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AppUser } from './appUser';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AppUserService {
   private currentUser : AppUser = null;
 
 
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient, private router: Router) { }
 
   public getAppUsers(): Observable<AppUser[]> {
     return this.http.get<AppUser[]>(`${this.apiServerUrl}/user-controller/readAll`);
@@ -43,5 +44,13 @@ constructor(private http: HttpClient) { }
     this.currentUser = appUser;
   }
 
+  public clearCurrentUser(appUser : AppUser) {
+    appUser = null;  
+    this.router.navigate(["/homepage"])
+    .then(()=> {
+      window.location.reload();
+    });
+    
+  }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { AppUserService } from '../appUser.service';
 @Component({
   selector: 'app-funds-transfer',
   templateUrl: './funds-transfer.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FundsTransferComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, public appUserService : AppUserService) { }
 
   ngOnInit(): void {
   }
