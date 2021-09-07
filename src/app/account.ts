@@ -1,7 +1,10 @@
+import { AppUser } from "./appUser";
+
 export interface Account {
-    accountId:number;
+    accountId:number
     accountName:string;
-    accountNumber:number;
     accountType:string;
     amount:number;
+    appUser: AppUser;
+
 }

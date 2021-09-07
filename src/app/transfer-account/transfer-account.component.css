@@ -13,3 +13,20 @@ body {
     background-size:cover;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
    }
+
+   .goBack{
+    position:absolute;
+    top: 10%;
+    left:10%;
+    font-size: larger;
+    font-family: cursive;
+}
+
+
+.logout{
+    position:absolute;
+    top: 10%;
+    right:10%;  
+    font-size: larger;
+    font-family: cursive;
+}

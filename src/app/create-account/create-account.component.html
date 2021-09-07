@@ -1,29 +1,57 @@
 
 <p>We regret that all Dragon Guarded Vaults are currently Full!</p>
 <body>
-    <img class ="images" src="../assets/Advertisementjr.png" alt="safety advertisement" ><br>
-<form> 
-<label for="firstName">&nbsp;Muggle First Name</label><br>
-<input type="text" name="firstName"><br><br>
-<label for="lastName">&nbsp;Muggle Last Name</label><br>
-<input type="text" name="lastName"><br><br>
-<label for="phoneNumber">&nbsp;PhoneNumber</label><br>
-<input type="text" name="phoneNumber"><br><br>
-<label for="address">&nbsp;Address</label><br>
-<input type="text" name="address"><br><br>
-<label for="emailId">&nbsp;E-Mail Id</label><br>
-<input type="text" name="emailId"><br><br>
-<label for="password">&nbsp;Enter New Password</label><br>
-<input type="password" name="password"><br><br>
-<label for="password">&nbsp;Confirm New Password</label><br>
-<input type="password" name="password"><br><br>
-<nav>
-    <a routerLink="/userLogins"><button>Submit</button></a>
-</nav>
+    <img class ="images" src="../assets/Advertisementjr.png" alt="safety advertisement" >
+    <br>
+   
+
+  
+<form #createAccountForm="ngForm" (ngSubmit)="submit(createAccountForm)"> 
+
+    <div *ngIf = "errorMessage != null"> 
+        <label for="errorMess">&nbsp;What's the hurry!?! Enter All the details if you'd like a vault!!</label>
+    </div>
+
+    <br>
+    <br>
+    <label for="firstName">Muggle First Name</label>
+    <br>
+    <input type="text" name="firstName" [(ngModel)]="firstName">
+    <br>
+    <br>
+    <label for="lastName">&nbsp;Muggle Last Name</label>
+    <br>
+    <input type="text" name="lastName" [(ngModel)]="lastName">
+    <br>
+    <br>
+    <label for="phoneNumber">&nbsp;Phone Number</label>
+    <br>
+    <input type="text" name="phoneNumber" [(ngModel)]="phoneNumber">
+    <br>
+    <br>
+    <label for="birthDate">&nbsp;Birth Date</label>
+    <br>
+    <input type="date" name="birthDate" [(ngModel)]="birthDate">
+    <br>
+    <br>
+    <label for="emailId">&nbsp;E-Mail Id</label>
+    <br>
+    <input type="text" name="emailId" [(ngModel)]="emailId">
+    <br>
+    <br>
+    <label for="password">&nbsp;Enter New Password</label>
+    <br>
+    <input type="password" name="password" [(ngModel)]="password">
+    <br>
+    <br>
+    <label for="confirmPassword">&nbsp;Confirm New Password</label>
+    <br>
+    <input type="password" name="password" [(ngModel)]="confirmPassword">
+    <br>
+    <br>
+    <button type = "submit" > Submit </button>
+   
+          
 </form>
-
-
-
-
 </body>
 

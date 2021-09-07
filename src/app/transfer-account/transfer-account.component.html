@@ -1,30 +1,72 @@
 <body>
-<form>   
+    <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
+        <button class ="logout">Logout</button>
+    </a>
+    <br>
+    <br>
+    <a routerLink="/funds-transfer">
+        <button class = "goBack">Back</button>
+    </a>
+    <br>
+    <br>
+<form #transferForm="ngForm" (ngSubmit)="submit(transferForm)">   
 
-    <label for="accountName">Vault Holder Name</label><br>
-   <input type="text" name="accountName"><br><br>
- 
-   <label for="accountNumber">Vault Number</label><br>
-   <input type="number" name="accountNumber"><br><br>
-
-   <label for="accountType">AccountType</label><br>
-   <select name="accountType" id="accountType">
-   <option value="checking">Checking Account</option>
-   <option value="saving">Saving Account</option>
-   </select><br><br>
-
-   <label for="accountNameToTransfer">Vault Holder Name to Transfer to</label><br>
-   <input type="text" name="accountNameToTransfer"><br><br>
-
-   <label for="accountNumberToTransfer">Vault Number to Transfer to</label><br>
-   <input type="number" name="accountNumberToTransfer"><br><br>
-
-   <label for="amountToTransfer">Amount To Transfer</label><br>
-   <input type="number" name="amountToTranfer"><br><br>
+    <!-- <label for="accountName">Muggle Name</label>
+    <br>
+    <input type="text" name="accountName">
+    <br>
+    <br> -->
+    <label for="accountId">Account ID to Transfer From</label>
+    <br>
+    <select name="accountIdFrom" id="accountIdFrom" [(ngModel)]="accountIdFrom">
+        <ng-container *ngFor="let a of accounts"> 
+            <option  value="{{a.accountId}}">{{a.accountId}}</option>
+        </ng-container>
+    </select>
+    <br>
+    <br>
+    <label for="accountType">Account Type</label>
+    <br>
+    <select name="accountType" id="accountType">
+        <option value="checking">Checking Account</option>
+        <option value="saving">Saving Account</option>
+    </select>
+    <br>
+    <br>
+    <a>--------------------------------------------------------</a>
+    <br>
+    <br>
+    <label for="accountId">Account ID to Transfer To</label>
+    <br>
+    <select name="accountIdTo" id="accountIdTo" [(ngModel)]="accountIdTo">
+        <ng-container *ngFor="let a of accounts"> 
+            <option  value="{{a.accountId}}">{{a.accountId}}</option>
+        </ng-container>
+    </select>
+    <br>
+    <br>
+    <label for="accountType">Account Type</label>
+    <br>
+    <select name="accountType" id="accountType">
+        <option value="checking">Checking Account</option>
+        <option value="saving">Saving Account</option>
+    </select>
+    <br>
+    <br>
+    <a>--------------------------------------------------------</a>
+    <br>
+    <br>
+    <label for="amountToTransfer">Amount To Transfer</label>
+    <br>
+    <input type="number" name="amountToTransfer" [(ngModel)]="amountToTransfer">
+    <br>
+    <br>
+    <button type = "submit" > Submit </button>
 
 </form>
 
-<nav>
-    <a routerLink="/view-account"><button>Submit</button></a>
-</nav>
+    <!-- <nav>
+        <a routerLink="/view-account">
+            <button>Submit</button></a>
+    </nav> -->
 </body>

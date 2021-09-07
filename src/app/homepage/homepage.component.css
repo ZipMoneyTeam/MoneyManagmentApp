@@ -45,7 +45,10 @@ body {
     font-size: large;
 }
 .login1{
-   font-size: large;
+    /* margin-right: auto;
+    display: block;
+    margin-left: auto; */
+    font-size: large;
     text-align: center;
    
 }

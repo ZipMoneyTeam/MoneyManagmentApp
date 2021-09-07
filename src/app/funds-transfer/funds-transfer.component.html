@@ -1,8 +1,40 @@
 <body>
     <nav>
-        <a routerLink="/view-account"><button class="methods">View Account Information</button></a><br><br>
-<a routerLink="/deposit"><button class="methods">Deposit</button></a><br><br>
-<a routerLink="/withdraw"><button class="methods">Withdraw</button></a><br><br>
-<a routerLink="/transfer-account"><button class="methods">Transfer</button></a><br><br>
-</nav>
+        <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
+            <button class ="logout">Logout</button>
+        </a>
+        <br>
+        <br>
+
+        <a routerLink="/view-account">
+            <button class="methods">View Account Information</button></a>
+        <br>
+        <br>
+        <br>
+        <a routerLink="/checking-saving">
+            <button class="methods"> Create Checking Or Savings</button></a>
+        <br>
+        <br>
+        <br>
+        <a routerLink="/deposit">
+            <button class="methods">Deposit</button></a>
+        
+        <a routerLink="/withdraw">&nbsp; &nbsp; 
+            <button class="methods">Withdraw</button></a>
+        
+        <a routerLink="/transfer-account">&nbsp; &nbsp;
+            <button class="methods">Transfer</button></a>
+        <br>
+        <br>    
+        <br>
+        <!-- <a routerLink="/homepage"> -->
+            <!-- <button class="logout">Logout</button></a> -->
+            <!-- <button onClick="window.location.reload();">Logout</button> -->
+
+        <!-- </a> -->
+
+        <!-- <button onclick = "myFunc()" > Logout </button> -->
+        
+
+    </nav>
 </body>

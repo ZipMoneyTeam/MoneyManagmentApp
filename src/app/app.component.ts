@@ -31,11 +31,10 @@ export class AppComponent {
     private transactionService:TransactionService) { }
 
   ngOnInit( ): void {
-    this.getAppUsers();
-    this.getAccounts();
+    //this.getAppUsers();
+    //this.getAccounts();
     // this.getTransactions();
-    this.getUserLogins();
-  }
+    //this.getUserLogins();
 
   public createAccount(account:Account):void{
     this.accountService.createAccount(account).subscribe(
