@@ -1,5 +1,17 @@
 <body>
-    <form>
+    <p class = "accountView" > Accounts View </p>
+    <div *ngIf="accounts">
+        <div *ngFor="let key of accounts">
+          <div>{{key.accountId}} | {{key.accountName}} | {{key.accountType}} | {{key.amount}}</div>
+        </div>
+      </div>
+      
+      <div *ngIf="!accounts">
+          <div>0 results found!</div>
+      </div>
+
+
+    <!-- <form>
         <label for="accountName">Muggle Name</label>
         <br>
         <input type="text" name="accountName">
@@ -38,7 +50,7 @@
     <nav>
         <a routerLink="/view-account">
             <button>Edit</button></a>
-    </nav>
+    </nav> -->
 
     <!-- <label for="readall">{{readAll}}</label> -->
 </body>

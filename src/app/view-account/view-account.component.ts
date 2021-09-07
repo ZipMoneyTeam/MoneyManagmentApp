@@ -21,13 +21,13 @@ export class ViewAccountComponent implements OnInit {
     .then(result => console.log(this.accounts = result))
   }
 
-  public getAccounts(): void {
-    this.accountService.getAccounts().subscribe(
-      (response:Account[])=>{
-        this.accounts=response;
-        console.log(this.accounts);
-      }
-    )
-   }
+  // public getAccounts(): void {
+  //   this.accountService.getAccounts().subscribe(
+  //     (response:Account[])=>{
+  //       this.accounts=response;
+  //       console.log(this.accounts);
+  //     }
+  //   )
+  //  }
 
 }
