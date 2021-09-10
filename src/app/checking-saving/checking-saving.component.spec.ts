@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginSaveComponent } from './login-save.component';
+import { CheckingSavingComponent } from './checking-saving.component';
 
-describe('LoginSaveComponent', () => {
-  let component: LoginSaveComponent;
-  let fixture: ComponentFixture<LoginSaveComponent>;
+describe('CheckingSavingComponent', () => {
+  let component: CheckingSavingComponent;
+  let fixture: ComponentFixture<CheckingSavingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginSaveComponent ]
+      declarations: [ CheckingSavingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginSaveComponent);
+    fixture = TestBed.createComponent(CheckingSavingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

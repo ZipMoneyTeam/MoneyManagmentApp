@@ -1,13 +1,29 @@
 
 <!-- <app-appUsers></app-appUsers> -->
-<form> 
 
-    <label for="userName">Muggle Id</label><br>
-<input type="text" name="userName"><br><br>
-<label for="password">Password</label><br>
-<input type="password" name="password">
+<body>
+   
+    
+<form #loginForm="ngForm" (ngSubmit)="submit(loginForm)" action="/action_page.php"> 
+<label for="emailId">Muggle E-Mail Id</label>
+<br>
+<input type="text" name="emailId" [(ngModel)]="emailId" required >
+<br>
+<br>
+<label for="password">Password</label>
+<br>
+<input type="password" name="password" [(ngModel)]="password">
+<br>
+<br>
+    <button type = "submit" > Submit </button>
 </form>
+<br>
 
-<nav>
-    <a routerLink="/login-save"><button>Save</button></a>
-</nav>
+<div *ngIf = "errorMessage != null"> 
+    <label for="errorMess">&nbsp;Hey muggle!
+        Wish you had magic to remember your login details? Sorry,too late! Enter you correct credentials!</label>
+</div>
+
+
+
+</body>

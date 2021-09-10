@@ -12,18 +12,24 @@ import { TransferAccountComponent } from './transfer-account/transfer-account.co
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FundsTransferComponent } from './funds-transfer/funds-transfer.component';
-import { LoginSaveComponent } from './login-save/login-save.component'
+import { ViewAccountComponent } from './view-account/view-account.component';
+import { AppUserService } from './appUser.service';
+import { UserLoginService } from './userLogin.service';
+import { AccountService } from './account.service';
+import { TransactionService } from './transaction.service';
+import { CheckingSavingComponent } from './checking-saving/checking-saving.component';
 
 const routes:Routes=[
-  { path: 'homepage',component:HomepageComponent},
+  {path: '',component:HomepageComponent},
   {path:'userLogins',component:UserLoginsComponent},
   {path:'create-account',component:CreateAccountComponent},
   {path:'funds-transfer',component:FundsTransferComponent},
   {path:'deposit',component:DepositComponent},
   {path:'withdraw',component:WithdrawComponent},
   {path:'transfer-account',component:TransferAccountComponent},
-  {path:'login-save',component:LoginSaveComponent}
-  
+  {path:'view-account',component:ViewAccountComponent},
+  {path:'checking-saving', component:CheckingSavingComponent},
+  {path:'homepage',component:HomepageComponent}
 ]
 
 @NgModule({
@@ -37,15 +43,17 @@ const routes:Routes=[
     WithdrawComponent,
     HomepageComponent,
     FundsTransferComponent,
-    LoginSaveComponent
-  ],
+    ViewAccountComponent,
+    CheckingSavingComponent,
+    ],
+
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AppUsersComponent,UserLoginsComponent],        
+  providers: [AppUsersComponent,UserLoginsComponent,AppUserService,UserLoginService,AccountService,TransactionService],        
   bootstrap: [AppComponent]
 })
 export class AppModule { }

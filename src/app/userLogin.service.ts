@@ -29,7 +29,13 @@ export class UserLoginService {
     return this.http.delete<UserLogin>(`${this.apiServerUrl}/member-controller/delete/${userLoginId}`);
   }
 
+  public login(userLogin: any): Observable<UserLogin> {
+    return this.http.post<UserLogin>(`${this.apiServerUrl}/member-controller/login`, userLogin);
+  }
 
+  public register(registrationDto: any): Observable<UserLogin> {
+    return this.http.post<UserLogin>(`${this.apiServerUrl}/member-controller/register`, registrationDto);
+  }
 
 
 }

@@ -1,0 +1,83 @@
+<body>
+    <a class = "methods" *ngIf="appUserService.getCurrentUser() != null" (click)="appUserService.clearCurrentUser(appUserService.getCurrentUser())">
+        <button class = "logout">Logout</button>
+    </a>
+    <a routerLink="/funds-transfer">
+        <button class = "goBack">Back</button>
+    </a>
+    <br>
+    <br>
+    <p class = "accountView" > Accounts View  </p>
+    <div *ngIf="accounts">
+        <div *ngFor="let key of accounts">
+            <label class="account" for="accountId">Account ID: &nbsp;&nbsp;{{key.accountId}}</label>
+            <br>
+            <br>
+          <!-- <div class="value">{{key.accountId}} </div><br> -->
+          <label class="account" for="accountName">Account Name: &nbsp;&nbsp;{{key.accountName}}</label>
+          <br>
+          <br>
+          <!-- <div class="value">{{key.accountName}} </div><br> -->
+          <label class="account" for="accountType">Account Type:&nbsp;&nbsp;{{key.accountType}}</label>
+          <br>
+          <br>
+          <!-- <div class="value">{{key.accountType}} </div><br> -->
+          <label class="account"for="amount">Amount:&nbsp;&nbsp;{{key.amount}}</label>
+          <!-- <div class="value">{{key.amount}} </div><br> -->
+            <br>
+            <br>
+            <a>----------------------------------------------------------------------------------------</a>
+            <br>
+            <br>
+       </div>
+      </div>
+   
+      <div *ngIf="!accounts">
+          <div>0 results found!</div>
+      </div>
+    
+      
+
+    <!-- <form>
+        <label for="accountName">Muggle Name</label>
+        <br>
+        <input type="text" name="accountName">
+        <br>
+        <br>
+      
+        <label for="accountNumber">AccountNumber</label>
+        <br>
+        <input type="number" name="accountNumber">
+        <br>
+        <br>
+        <label for="accountType">AccountType</label>
+        <br>
+        <select name="accountType" id="accountType">
+            <option value="checking">Checking Account</option>
+            <option value="saving">Saving Account</option>
+        </select>
+        <br>
+        <br>
+        <label for="emailId">Email id</label>
+        <br>
+        <input type="text" name="emailId">
+        <br>
+        <br>
+        <label for="phoneNumber">Phone Number</label>
+        <br>
+        <input type="number" name="phoneNumber">
+        <br>
+        <br>
+        <label for="birthday">Date of Birth</label>
+        <br>
+        <input type="date" name="birthday">
+        <br>
+        <br>
+    </form>
+    <nav>
+        <a routerLink="/view-account">
+            <button>Edit</button></a>
+    </nav> -->
+
+    <!-- <label for="readall">{{readAll}}</label> -->
+</body>
